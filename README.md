@@ -15,7 +15,7 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 ```
 Note :- After this done, Need to run comman 4 & 5 on master and slave & command 6 need to be run on Master only
 
-
+***************************************************************************************************
 # Docker installation shell script 
 ```
 # Add Docker's official GPG key:
@@ -42,6 +42,18 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo chmod 666 /var/run/docker.sock
 ```
 
+# Creating Sonarqube container on Docker
+
+```
+docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
+```
+
+# Creating a nexus container on the nexus server
+```
+docker run -d --name nexus -p 8001:8001 sonatype/nexus3
+```
+
+*******************************************************************************
 
 # 1 to install Docker  & Kubernetes -
 
@@ -122,5 +134,6 @@ mv kubeaudit /usr/local/bin
 ```
 kubeaudit all
 ```
+
 
 
