@@ -82,7 +82,21 @@ kubectl apply -f https://docs.projectcalico.org/v3.20/manifests/calico.yaml
 # 8 Deploy Ingress Controller (NGINX) [On MasterNode]
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.49.0/deploy/static/provider/baremetal/deploy.yaml
+```
 
+## After all this done we need to scan the kubernetes cluster with some tool and that tool is kubeaudit.  which can be downloaded from below link. 
+
+```
+https://github.com/shopify/kubeaudit/releases
+
+```
+After downloading we need to extract the tar file, > Move the kube audit file to the locatoion /usr/local/bin > then run command 'kubeaudit all'
+
+```
+mv kubeaudit /usr/local/bin
+```
+```
+kubeaudit all
 ```
 
 
