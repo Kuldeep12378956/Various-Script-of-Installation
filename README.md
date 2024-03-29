@@ -72,6 +72,16 @@ sudo apt-get update
 sudo apt-get install jenkins -y
 ```
 
+## To install Trivy 
+
+```
+sudo apt install wget apt-transport-https gnupg lsb-release
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+echo "deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
+sudo apt update
+sudo apt install trivy
+```
+
 *******************************************************************************
 
 # 1 to install Docker  & Kubernetes -
